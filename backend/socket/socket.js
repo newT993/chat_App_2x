@@ -6,9 +6,9 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server, {
     cors:{
-        origin: ['https://chat-app-2x.onrender.com'],
-        methods: ['GET', 'POST'],
-        credentials: true
+        origin: ['http://localhost:3000', 'https://chat-app-2x.onrender.com'], // Allow both localhost and deployed app
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add HTTP methods you want to allow
+  credentials: true,
     }
 })
 

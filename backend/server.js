@@ -17,9 +17,10 @@ dotenv.config();
 app.use(cookieParser())
 app.use(express.urlencoded({ extended:false }));
 app.use(cors({
-    origin: ['https://chat-app-2x.onrender.com', 'http://localhost:3000'], // Add all allowed origins here
-    credentials: true
-}))
+    origin: ['http://localhost:3000', 'https://chat-app-2x.onrender.com'], // Allow both localhost and deployed app
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Add HTTP methods you want to allow
+    credentials: true, // If you need cookies or authentication headers
+  }));
 app.use(express.json()) //to parse incoming request with json 
 
 
