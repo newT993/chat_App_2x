@@ -17,7 +17,7 @@ dotenv.config();
 app.use(cookieParser())
 app.use(express.urlencoded({ extended:false }));
 app.use(cors({
-    origin: 'https://chat-app-2x.onrender.com/',
+    origin: 'https://chat-app-2x.onrender.com',
     credentials: true
 }))
 app.use(express.json()) //to parse incoming request with json 
